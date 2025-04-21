@@ -1,5 +1,6 @@
 // File: Main.java
 
+import java.util.ArrayList;
 import java.util.Scanner; // Import Scanner for user input
 
 public class Main {
@@ -8,12 +9,14 @@ public class Main {
 
     // Fill inventory with 20 example books
     private static void initializeBooks() {
+
         for (int i = 0; i < inventory.length; i++) {
-            if (inventory[i] == null){
-                continue;
-            }
+
             inventory[i] = new Book(i + 1, "978-00000000" + i, "Book Title " + (i + 1));
+
         }
+
+
     }
 
     // Main loop for library operations
@@ -124,5 +127,8 @@ public class Main {
             }
         }
         return null; // Return null if book not found
+
     }
+
+
 }
